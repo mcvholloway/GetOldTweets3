@@ -325,7 +325,7 @@ class TweetManager:
             urlGetData += ' min_retweets:' + tweetCriteria.minRetweets
 
         if hasattr(tweetCriteria, 'lang'):
-            urlLang = 'l=' + tweetCriteria.lang + '&'
+            urlLang = ' lang:' + tweetCriteria.lang + '&'
         else:
             urlLang = ''
         url = url % (urllib.parse.quote(urlGetData.strip()), urlLang, urllib.parse.quote(refreshCursor))
